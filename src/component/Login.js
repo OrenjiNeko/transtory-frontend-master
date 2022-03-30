@@ -34,22 +34,20 @@ const Login = () => {
         headers: { "Content-Type": "application/json" },
         // withCredentials:true
       });
-
-      // console.log(resp?.data);
-      // localStorage.setItem('jwt',resp?.data?.data?.access_token)
       localStorage.setItem("accessToken", resp?.data?.data?.access_token);
+      localStorage.setItem("name", resp?.data?.data?.user?.name);
+      localStorage.setItem("emails", resp?.data?.data?.user?.email);
+      
       const accessToken = localStorage.getItem("accessToken");
-      // console.log(accessToken)
-      // const accessToken = resp?.data?.data?.access_token;
-      // const nama = resp?.data?.data?.user?.name;
-      const user = resp?.data?.data?.user;
-      setAuth({ user,accessToken });
+      
+      const name = localStorage.getItem("name");
+      const emails = localStorage.getItem("emails");
+      setAuth({ name,accessToken,emails });
       setEmail("");
       setPassword("");
       navigate(from, { replace: true });
     } catch (error) {
-      setErrMsg(error?.response?.data?.data?.message);
-      alert(errMsg);
+      alert(error?.response?.data?.data?.message);
     }
   };
 

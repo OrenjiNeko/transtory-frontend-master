@@ -33,9 +33,9 @@ const AkunSaya = () => {
       const resp = await axiosPrivate.post(PASSWORD_URL, JSON.stringify({ old_password, new_password, confirm_password }), {
         // withCredentials:true
       });
-      console.log(resp);
+      alert("Ganti Password Berhasil")
     } catch (error) {
-      console.log(error?.response?.data);
+      alert(error?.response?.data?.data?.message)
     }
   };
 
@@ -52,7 +52,7 @@ const AkunSaya = () => {
                 <label htmlFor="name" className="form-label">
                   Nama Lengkap
                 </label>
-                {auth?.user ? <input type="text" className="form-control" id="name" placeholder={auth?.user?.name} disabled /> : <input type="text" className="form-control" id="name" placeholder="" />}
+                {localStorage["name"] ? <input type="text" className="form-control" id="name" placeholder={localStorage["name"]} disabled /> : <input type="text" className="form-control" id="name" placeholder="" />}
               </div>
 
               {/* <!--E-mail--> */}
@@ -60,7 +60,7 @@ const AkunSaya = () => {
                 <label htmlFor="email" className="form-label">
                   Alamat Email
                 </label>
-                {auth?.user ? <input type="text" className="form-control" id="name" placeholder={auth?.user?.email} disabled /> : <input type="text" className="form-control" id="name" placeholder="" />}
+                {localStorage["emails"] ? <input type="text" className="form-control" id="name" placeholder={localStorage["emails"]} disabled /> : <input type="text" className="form-control" id="name" placeholder="" />}
               </div>
 
               {/* <!--password--> */}

@@ -49,7 +49,7 @@ const Navbar = () => {
                       <a class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person" style={{ fontSize: "40px" }} />
                       </a>
-                      {auth?.user ? (
+                      {localStorage["name"] ? (
                         <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="dropdownMenuButton1">
                           <li>
                             <Link class="dropdown-item" to="akunSaya">

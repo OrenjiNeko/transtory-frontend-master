@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
 const TambahkanAkun = () => {
+  const [banks_id, setBanks_id] = useState();
+
+  
   return (
     <>
       <h1 style={{ color: "#FF735C" }} className="mt-5 mb-5 text-center">

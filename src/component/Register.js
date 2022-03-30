@@ -47,18 +47,17 @@ const Register = () => {
           headers: { "Content-Type": "application/json" },
           // withCredentials:true
         });
-        console.log(resp.data.meta.status);
+        // console.log(resp.data.meta.status);
         setSuccess(true);
         alert("Pendaftaran Berhasil, Silahkan Login")
         navigate('/login')
         
       } catch (error) {
-        console.log(error.response.data);
-        setErrMsg(error.response.data.data.message);
+        alert(error.response.data.data.message);
         // setError(true);
       }
     } else {
-      setErrMsg("Password tidak sesuai");
+      alert("Password tidak sesuai");
     }
   };
 
@@ -69,7 +68,7 @@ const Register = () => {
           <div className="row justify-content-center">
             <div className="col-md-5">
               
-              {success ? (
+              {/* {success ? (
                 <div className="alert alert-success alert-dismissible fade show" role="alert">
                   <p>Pendaftaran Berhasil, silahkan login</p>
                   <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -80,7 +79,7 @@ const Register = () => {
                   <p>{errMsg}</p>
                   <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
 

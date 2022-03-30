@@ -61,20 +61,20 @@ class App extends Component {
           console.log(error);
         }),
       axios
-        .get("https://transtory-backend.herokuapp.com/api/bsi/transaction", {
+        .get("https://transtory-backend.herokuapp.com/api/bsi/transaction/100010", {
           bsi: [],
         })
         .then((resp) => {
           // console.log(response.data.data.response)
           this.setState({
-            bsi: resp.data,
+            bsi: resp.data.data,
           });
         })
         .catch((error) => {
           console.log(error);
         }),
       axios
-        .post("https://transtory-backend.herokuapp.com/api/mandiri/transaction", {
+        .get("https://transtory-backend.herokuapp.com/api/mandiri/transaction", {
           mandiri: [],
         })
         .then((resp) => {

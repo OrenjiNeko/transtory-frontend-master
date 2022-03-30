@@ -81,7 +81,7 @@ const Home = (props) => {
               <div className="row">
                 <div className="col">
                   <h3>
-                    Halo, <b style={{ color: "#ff735c" }}>{auth?.user ? auth?.user?.name : "Pengguna Baru"}</b>
+                    Halo, <b style={{ color: "#ff735c" }}>{localStorage["name"] ?localStorage["name"]  : "Pengguna Baru"}</b>
                   </h3>
                 </div>
               </div>

@@ -149,6 +149,8 @@ class Transaksi extends Component {
                   })}
                 </tbody>
               </table>
+
+              
             </div>
           </div>
         </section>

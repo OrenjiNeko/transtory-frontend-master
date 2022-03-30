@@ -49,7 +49,7 @@ const AkunBank = () => {
       <section id="akunbank" className="akunbank">
         {/* Unauthorized */}
         <div className="container p-5">
-          {/* <div className="row">
+          <div className="row">
             <div className="col-sm-8">
               <h1 style={{ color: "#FF735C" }}>Akun Bank Anda</h1>
               <hr style={{ color: "#285c52", height: "1.5px" }} width="400" />
@@ -77,7 +77,7 @@ const AkunBank = () => {
                 </Link>
               </div>
             </div>
-          </div> */}
+          </div>
 
           {/* Authorized */}
           {/* BNI */}

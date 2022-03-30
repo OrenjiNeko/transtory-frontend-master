@@ -11,6 +11,9 @@ const useLogout = () => {
 
     const logout = async () =>{
         setAuth({});
+        localStorage.removeItem("accessToken");
+        localStorage.removeItem("name");
+        localStorage.removeItem("emails");
         try {
             const response = await axiosPrivate.post(LOGOUT_URL, {
                 headers:{
